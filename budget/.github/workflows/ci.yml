@@ -29,10 +29,12 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install pre-commit
+        run: pip install pre-commit
+
       - name: Run pre-commit hooks
-        uses: pre-commit/action@v3.0.1
-        with:
-          extra_args: --all-files
+        run: pre-commit run --all-files --config ../budget/.pre-commit-config.yaml
+        working-directory: budget
 
       - name: Test Node.js CLI
         run: |
