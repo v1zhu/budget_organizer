@@ -5,7 +5,7 @@ Personal budget manager with a CLI and web UI. Tracks expenses and earnings by c
 ## Quick Start
 
 ```bash
-cd budget
+cd budget_organizer
 npm install
 npm start        # web UI at http://localhost:5000
 ```
