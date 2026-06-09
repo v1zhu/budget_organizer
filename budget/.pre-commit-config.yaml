@@ -3,13 +3,11 @@ repos:
     rev: v4.6.0
     hooks:
       - id: trailing-whitespace
-        types: [file]
-        files: \.(py|js|html|json|yaml|yml|css|md)$
+        exclude: ^(budget/node_modules/|venv/|__pycache__/)
       - id: end-of-file-fixer
-        types: [file]
-        files: \.(py|js|html|json|yaml|yml|css|md)$
+        exclude: ^(budget/node_modules/|venv/|__pycache__/)
       - id: check-yaml
       - id: check-json
-        files: \.json$
+        exclude: ^(budget/node_modules/|venv/)
       - id: check-added-large-files
       - id: check-merge-conflict
